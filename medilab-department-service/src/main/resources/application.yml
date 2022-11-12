@@ -2,9 +2,9 @@ spring:
   application:
     name: medilab-department-service
   profiles:
-    active: dev
+    active: ${MEDILAB_PROFILE:dev}
 server:
-  port: 9098
+  port: ${DEPT_SERVICE_PORT:9098}
   tomcat:
     connection-timeout: 180000
       
@@ -23,11 +23,11 @@ user:
 spring:
   profiles: dev
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: ${MEDILAB_DB_DRIVER:com.mysql.cj.jdbc.Driver}
     #url: jdbc:mysql://localhost:30306/medilab-department-service
-    url: jdbc:mysql://department-service-database:3306/medilab-department-service
-    username: root
-    password: root
+    url: ${MEDILAB_DB_URL:jdbc:mysql://department-service-database:3306/medilab-department-service}
+    username: ${MEDILAB_DB_USER:root}
+    password: ${MEDILAB_DB_PASSWORD:root}
   jpa:
     generate-ddl: true
     show-sql: true
