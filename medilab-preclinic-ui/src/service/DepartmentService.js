@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const DEPARTMENT_SERVICE_URL = "http://localhost:8095/api/medilab-department-service/api/mediplab-department";
+//const DEPARTMENT_SERVICE_URL = "http://localhost:8095/api/medilab-department-service/api/mediplab-department";
+const DEPARTMENT_SERVICE_URL = "http://52.66.102.234:32180/api/mediplab-department";
 
 class DepartmentService{
 
